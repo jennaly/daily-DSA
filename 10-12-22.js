@@ -2,7 +2,7 @@
 
 // domainName("http://github.com/carbonfive/raygun") == "github" 
 // domainName("http://www.zombie-bites.com") == "zombie-bites"
-// domainName("https://www.cnet.com") == "cnet
+// domainName("https://www.cnet.com") == "cnet"
 
 //given a URL
 //return the domain name as a string
@@ -10,6 +10,9 @@
 //returning output
 //domain name always ends with .com
 //does a period signal the end of a domain name
+//will the argument always be a url? no symbols, strange character?
+//will the url always start with http:// or https:// ?
+//will there be anything before the domain name that is not included in the provided test cases here?
 
 //use replace to relace the start of the URL with an empty string
 //call replace 3 times to cover all the variations
