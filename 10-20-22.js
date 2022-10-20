@@ -30,3 +30,23 @@ function repeats(numbers) {
 function repeats(numbers) {
     return numbers.filter(num => numbers.indexOf(num) === numbers.lastIndexOf(num)).reduce((a,b) => a + b, 0)
 }
+
+//look-up table
+function repeats(numbers) {
+    let sum = 0;
+    const hashmap = {};
+
+    for (const num of numbers) {
+        if (hashmap[num]) {
+            ++hashmap[num]
+        } else {
+            hashmap[num] = 1
+        }
+    }
+
+    for (const key in hashmap) { 
+        if (hashmap[key] === 1) sum += +key
+    }
+    
+    return sum
+}
