@@ -36,4 +36,15 @@ function duplicateEncode(word){
   console.log(checkDuplicates("Success"))  // =>  ")())())"
   console.log(checkDuplicates("(( @"))     // =>  "))((" 
   
+//refactored for readability
+
+function duplicateEncode(word) {
+  return word 
+    .toLowerCase()
+    .split("")
+    .map (function (letter) {
+      return letter.indexOf() === letter.lastIndexOf() ? "(" : ")"
+    }) 
+    .join("");
+}
   
