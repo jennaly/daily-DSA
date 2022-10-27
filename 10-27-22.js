@@ -24,9 +24,12 @@
 //map values to new array
 //return the new array as a string
 
-function checkDuplicates(string) {
-    return [...string].map(letter => [...string].indexOf(letter) === [...string].lastIndexOf(letter) ? "(" : ")").join("")
-  }
+function duplicateEncode(word){
+  const lowerCasedLetters = word.toLowerCase().split("");
+  return lowerCasedLetters.map(letter => lowerCasedLetters.indexOf(letter) === lowerCasedLetters.lastIndexOf(letter) ? "(" : ")").join("")
+}
+
+
   
   console.log(checkDuplicates("din"))      // =>  "((("
   console.log(checkDuplicates("recede"))   // =>  "()()()"
